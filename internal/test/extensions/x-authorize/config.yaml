@@ -1,4 +1,4 @@
-package: xedgioauthorize
+package: xauthorize
 generate:
   chi-server: true
   models: true

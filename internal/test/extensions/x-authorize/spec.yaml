@@ -9,11 +9,11 @@ paths:
       operationId: get-partners
       security:
         - bearerAuth:
-            - id.edgio_accounts
-            - "id.edgio_accounts:read"
-      x-edgio-authorize:
-        resource-kind: edg:id:edgio-accounts:partner
-        action: edg:id:edgio-accounts:get-partners
+            - id.accounts
+            - "id.accounts:read"
+      x-authorize:
+        resource-kind: edg:id:accounts:partner
+        action: edg:id:accounts:get-partners
       responses:
         "200":
           description: OK
@@ -26,7 +26,6 @@ components:
   schemas:
     partner:
       allOf:
-        - $ref: "https://raw.githubusercontent.com/Edgio/hyperion/v1.0.0/schema/node.json"
         - type: object
           additionalProperties: false
           properties:
@@ -43,7 +42,6 @@ components:
             - name
     partners:
       allOf:
-        - $ref: "https://raw.githubusercontent.com/Edgio/hyperion/v1.0.0/schema/collection.json"
         - type: object
           additionalProperties: false
           properties:
