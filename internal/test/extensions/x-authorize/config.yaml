@@ -1,0 +1,5 @@
+package: xauthorize
+generate:
+  chi-server: true
+  models: true
+output: server.gen.go
