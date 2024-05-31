@@ -13,9 +13,9 @@ const (
 {{end}}
 )
 {{end}}
-{{- if gt (len .OperationExtensionKeys) 0 }}
+{{- if gt (len .OperationExtensions) 0 }}
 const (
-{{range $key, $val := .OperationExtensionKeys}}
+{{range $key, $val := .OperationExtensions}}
     {{- $key}} = "{{$val}}"
 {{end}}
 )
